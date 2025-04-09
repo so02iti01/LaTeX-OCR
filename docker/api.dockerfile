@@ -12,7 +12,7 @@ ADD README.md /latexocr/
 
 RUN pip install torch>=1.7.1
 
-RUN pip install -e .[api]
+RUN pip install -v -e . && pip install -v fastapi uvicorn
 
 RUN python -m pix2tex.model.checkpoints.get_latest_checkpoint
 
